@@ -7,13 +7,14 @@ public class LootPicker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (TryGetComponent(out LootComponent loot))
+        if (collision.TryGetComponent(out LootComponent loot))
         {
             _upgradeManager.AddUpgrade(loot.GetUpgrade());
+            Debug.Log("Подобрал лут");
         }
         else
         {
-            Debug.LogError("В луте не было улучшения");
+            Debug.LogError("В луте не было улучшения" + loot);
         }
     }
 }

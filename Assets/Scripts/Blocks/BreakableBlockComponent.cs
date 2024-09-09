@@ -27,7 +27,8 @@ public class BreakableBlockComponent : MonoBehaviour
 
             if (_hitPoints <= 0)
             {
-                Destroy(gameObject);
+                OnDestroyed?.Invoke(gameObject);
+                Destroy(gameObject, 0.1f);
             }
             else
             {
@@ -39,10 +40,5 @@ public class BreakableBlockComponent : MonoBehaviour
     private void UpdateBlockColor()
     {
         _spriteRenderer.color = _blockColors[_hitPoints - 1];
-    }
-
-    private void OnDestroy()
-    {
-        OnDestroyed?.Invoke(gameObject);
     }
 }

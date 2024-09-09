@@ -8,4 +8,9 @@ public class Upgrade : ScriptableObject
     public UpgradeType Type;
     public Sprite View;
     public float ActionTime;
+
+    public Upgrade Clone()
+    {
+        return (Upgrade)this.MemberwiseClone();
+    }
 }

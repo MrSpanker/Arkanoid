@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc14cf178bc6d16418af39acd3a14bc4, type: 3}
+  m_Name: Level7
+  m_EditorClassIdentifier: 
+  Slots:
+  - BlockType: 0
+    Coordinates: {x: 0, y: 0}
+  - BlockType: 0
+    Coordinates: {x: 0, y: 1}
+  - BlockType: 0
+    Coordinates: {x: 0, y: 2}
+  - BlockType: 0
+    Coordinates: {x: 0, y: 3}
+  - BlockType: 0
+    Coordinates: {x: 0, y: 4}
+  - BlockType: 0
+    Coordinates: {x: 0, y: 5}
+  - BlockType: 0
+    Coordinates: {x: 0, y: 6}
+  - BlockType: 0
+    Coordinates: {x: 0, y: 7}
+  - BlockType: 0
+    Coordinates: {x: 1, y: 0}
+  - BlockType: 2
+    Coordinates: {x: 1, y: 1}
+  - BlockType: 0
+    Coordinates: {x: 1, y: 2}
+  - BlockType: 2
+    Coordinates: {x: 1, y: 3}
+  - BlockType: 0
+    Coordinates: {x: 1, y: 4}
+  - BlockType: 0
+    Coordinates: {x: 1, y: 5}
+  - BlockType: 2
+    Coordinates: {x: 1, y: 6}
+  - BlockType: 0
+    Coordinates: {x: 1, y: 7}
+  - BlockType: 1
+    Coordinates: {x: 2, y: 0}
+  - BlockType: 0
+    Coordinates: {x: 2, y: 1}
+  - BlockType: 0
+    Coordinates: {x: 2, y: 2}
+  - BlockType: 0
+    Coordinates: {x: 2, y: 3}
+  - BlockType: 2
+    Coordinates: {x: 2, y: 4}
+  - BlockType: 0
+    Coordinates: {x: 2, y: 5}
+  - BlockType: 0
+    Coordinates: {x: 2, y: 6}
+  - BlockType: 0
+    Coordinates: {x: 2, y: 7}
+  - BlockType: 0
+    Coordinates: {x: 3, y: 0}
+  - BlockType: 2
+    Coordinates: {x: 3, y: 1}
+  - BlockType: 0
+    Coordinates: {x: 3, y: 2}
+  - BlockType: 0
+    Coordinates: {x: 3, y: 3}
+  - BlockType: 1
+    Coordinates: {x: 3, y: 4}
+  - BlockType: 0
+    Coordinates: {x: 3, y: 5}
+  - BlockType: 0
+    Coordinates: {x: 3, y: 6}
+  - BlockType: 2
+    Coordinates: {x: 3, y: 7}
+  - BlockType: 2
+    Coordinates: {x: 4, y: 0}
+  - BlockType: 0
+    Coordinates: {x: 4, y: 1}
+  - BlockType: 1
+    Coordinates: {x: 4, y: 2}
+  - BlockType: 0
+    Coordinates: {x: 4, y: 3}
+  - BlockType: 1
+    Coordinates: {x: 4, y: 4}
+  - BlockType: 0
+    Coordinates: {x: 4, y: 5}
+  - BlockType: 2
+    Coordinates: {x: 4, y: 6}
+  - BlockType: 0
+    Coordinates: {x: 4, y: 7}
+  - BlockType: 0
+    Coordinates: {x: 5, y: 0}
+  - BlockType: 1
+    Coordinates: {x: 5, y: 1}
+  - BlockType: 0
+    Coordinates: {x: 5, y: 2}
+  - BlockType: 1
+    Coordinates: {x: 5, y: 3}
+  - BlockType: 0
+    Coordinates: {x: 5, y: 4}
+  - BlockType: 1
+    Coordinates: {x: 5, y: 5}
+  - BlockType: 0
+    Coordinates: {x: 5, y: 6}
+  - BlockType: 0
+    Coordinates: {x: 5, y: 7}
+  Rows: 6

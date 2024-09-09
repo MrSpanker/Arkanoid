@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Expansion
   m_EditorClassIdentifier: 
   Type: 0
+  View: {fileID: 21300000, guid: 722f400a96f9ace4fb66933dd95fc229, type: 3}
   ActionTime: 10

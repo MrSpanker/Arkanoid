@@ -5,7 +5,7 @@ public class PlayerUpgradeManager : MonoBehaviour
 {
     [SerializeField] private PlatformResizer _platformResizer;
 
-    private List<Upgrade> _upgrades = new();
+    public List<Upgrade> _upgrades = new();
 
     private void Update()
     {
@@ -21,8 +21,21 @@ public class PlayerUpgradeManager : MonoBehaviour
 
     public void AddUpgrade(Upgrade upgrade)
     {
-        ActivateUpgrade(upgrade.Type);
-        _upgrades.Add(upgrade);
+        // Проверка на наличие улучшения того же типа
+        Upgrade existingUpgrade = _upgrades.Find(u => u.Type == upgrade.Type);
+
+        if (existingUpgrade != null)
+        {
+            existingUpgrade.ActionTime = upgrade.ActionTime;
+            Debug.Log("Улучшение уже активно, Обновил время действия");
+        }
+        else
+        {
+            Upgrade upgradeClone = upgrade.Clone();
+            ActivateUpgrade(upgradeClone.Type);
+            _upgrades.Add(upgradeClone);
+            Debug.Log("Добавил новое улучшение (копию)");
+        }
     }
 
     private void RemoveUpgrade(Upgrade upgrade)
@@ -43,6 +56,8 @@ public class PlayerUpgradeManager : MonoBehaviour
                 Debug.LogError("Не назначен тип улучшения");
                 break;
         }
+
+        Debug.Log("Активаировал апгрейд");
     }
 
     private void DeactivateUpgrade(UpgradeType upgradeType)
@@ -57,5 +72,7 @@ public class PlayerUpgradeManager : MonoBehaviour
                 Debug.LogError("Не назначен тип улучшения");
                 break;
         }
+
+        Debug.Log("Действие улучшения закончилось");
     }
 }

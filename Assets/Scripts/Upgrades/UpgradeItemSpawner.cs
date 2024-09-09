@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UpgradeItemSpawner : MonoBehaviour
 {
-    //[SerializeField] private List<Upgrade> _availableUpgrades;
-    //[SerializeField] private GameObject _lootTemplate;
+    [SerializeField] private List<Upgrade> _availableUpgrades;
+    [SerializeField] private GameObject _lootTemplate;
     [SerializeField] private float _initialSpawnProbability = 0.1f; 
     [SerializeField] private float _probabilityChangeRate = 0.05f; 
 
@@ -31,14 +31,14 @@ public class UpgradeItemSpawner : MonoBehaviour
 
     private void SpawnUpgrade(Vector2 position)
     {
-        //Upgrade upgrade = _availableUpgrades[Random.Range(0, _availableUpgrades.Count)];
-        //GameObject upgradeObject = Instantiate(_lootTemplate, position, Quaternion.identity);
+        Upgrade upgrade = _availableUpgrades[Random.Range(0, _availableUpgrades.Count)];
+        GameObject upgradeObject = Instantiate(_lootTemplate, position, Quaternion.identity);
 
-        //LootComponent lootComponent = upgradeObject.GetComponent<LootComponent>();
-        //if (lootComponent != null)
-        //{
-        //    lootComponent.Initialize(upgrade);
-        //}
+        LootComponent lootComponent = upgradeObject.GetComponent<LootComponent>();
+        if (lootComponent != null)
+        {
+            lootComponent.Initialize(upgrade);
+        }
 
         Debug.Log("Случайный лут заспавнился");
     }
