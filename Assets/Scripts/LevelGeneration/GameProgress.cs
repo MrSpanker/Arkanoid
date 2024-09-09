@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -40,15 +39,13 @@ public static class GameProgress
             return null;
         }
 
-        if (_currentLevel < _levels.Count)
+        if (_currentLevel >= _levels.Count)
         {
-            return _levels[_currentLevel];
+            _currentLevel = 0;
+            SaveProgress();
         }
-        else
-        {
-            Debug.LogError("Уровень с данным индексом отсутствует.");
-            return null;
-        }
+
+        return _levels[_currentLevel];
     }
 
     public static void NextLevel()
@@ -85,7 +82,7 @@ public static class GameProgress
     {
         _currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
         _playerScore = PlayerPrefs.GetInt("PlayerScore", 0);
-        Debug.Log("Загружен прогресс: \tУровень - " +  _currentLevel + "\tОчков - " + _playerScore);
+        Debug.Log("Загружен прогресс: \tУровень - " + _currentLevel + "\tОчков - " + _playerScore);
         OnSavesLoad?.Invoke();
     }
 

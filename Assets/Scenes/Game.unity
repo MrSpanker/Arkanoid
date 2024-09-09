@@ -537,7 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 232415389}
   _audioClip: {fileID: 8300000, guid: fe409264ccb4a6847b2314e8e9825468, type: 3}
-  _initialSpeed: 9
+  _initialSpeed: 10
   _directionVariance: 0.5
   _minReflectionAngle: 165
   _maxReflectionAngle: 195
